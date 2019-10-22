@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node client"
   },
   "author": "Sandy Milne",
   "license": "ISC",
