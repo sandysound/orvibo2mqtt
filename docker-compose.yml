@@ -1,0 +1,14 @@
+services:
+  orvibo2mqtt:
+    build: .
+    container_name: orvibo2mqtt
+    restart: unless-stopped
+    ports:
+      # The plugs connect here. Point homemate.orvibo.com at this host with a DNS rewrite.
+      - '10001:10001'
+    env_file: .env
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
