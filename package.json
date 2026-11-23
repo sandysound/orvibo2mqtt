@@ -1,23 +1,30 @@
 {
   "name": "orvibo2mqtt",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Bridge Orvibo B25 smart sockets to MQTT with Home Assistant discovery",
+  "main": "src/index.js",
+  "private": true,
   "scripts": {
-    "lint": "eslint --fix .",
-    "start": "node client"
+    "start": "node src/index.js",
+    "test": "node --test test/*.test.js",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "vendor": "scripts/vendor.sh"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "author": "Sandy Milne",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11",
-    "mqtt": "^2.18.8",
-    "orvibo-b25-server": "^1.0.1"
+    "buffer-crc32": "^1.0.0",
+    "mqtt": "^5.10.0"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2"
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.0.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.0"
   }
 }
